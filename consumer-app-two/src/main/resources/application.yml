@@ -1,0 +1,23 @@
+server:
+  port: 8073
+spring:
+  application:
+    name: consumer-app-two
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
+  jms:
+    topic-name: "topic.st03"
+
+logging:
+  level:
+    root: error
+    com:
+      tananushka:
+        mom:
+          consumerapp:
+            two:
+              consumer: info

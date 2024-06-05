@@ -1,0 +1,25 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: producer-app
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
+  jms:
+    topic-name: "topic.st03"
+    scheduler:
+      fixed-rate: 3000
+    pub-sub-domain: true
+
+logging:
+  level:
+    root: error
+    com:
+      tananushka:
+        mom:
+          producerapp:
+            producer: info
